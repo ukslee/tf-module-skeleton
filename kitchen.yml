@@ -1,0 +1,28 @@
+---
+driver:
+  name: terraform
+
+  root_module_directory: examples/complete
+
+provisioner:
+  name: terraform
+
+verifier:
+  name: terraform
+
+platforms:
+  - name: tf_state
+    drivier:
+
+    verifier:
+      systems:
+        - name: local
+          backend: local
+          controls:
+            - state_file
+            - terraform_output
+
+suites:
+  - name: default
+#    run_list:
+#    attributes:
