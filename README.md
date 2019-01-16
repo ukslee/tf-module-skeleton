@@ -1,7 +1,7 @@
 
 # tf-module-skeleton
 
-[![CircleCI](https://circleci.com/gh/ukslee/tf-module-skeleton.svg?style=svg&circle-token=ae1e8c8fe20ffc46e0b0f0be9df98549415af77b)](https://circleci.com/gh/ukslee/tf-module-skeleton)
+[![CircleCI](https://circleci.com/gh/ukslee/tf-module-skeleton.svg?style=svg)](https://circleci.com/gh/ukslee/tf-module-skeleton)
 
 terraform module code skeleton including belows:
 
