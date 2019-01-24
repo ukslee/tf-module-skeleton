@@ -7,7 +7,6 @@ control 'terraform_output' do
   )
   sample_mod = tfstate_json.modules
                            .find { |mod| mod['path'] == %w[root sample_mod] }
-
   describe sample_mod['outputs']['sample_output']['value'] do
     it { should eq 'sample output' }
   end

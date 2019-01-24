@@ -3,6 +3,6 @@ control 'state_file' do
 
   tfstate = command('find $(pwd) -name "terraform.tfstate"').stdout.delete("\n")
   describe json(tfstate).terraform_version do
-    it { should match "/\d+\.\d+\.\d+/" }
+    it { should match(/\d+\.\d+\.\d+/) }
   end
 end
