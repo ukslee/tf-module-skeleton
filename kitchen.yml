@@ -1,19 +1,22 @@
 ---
 driver:
   name: terraform
-  root_module_directory: test/fixtures
-
 provisioner:
   name: terraform
-
 verifier:
   name: terraform
 
 platforms:
   - name: default
-    drivier:
+    driver:
       root_module_directory: test/fixtures/default
+      variable_files:
+        - test/fixtures/default/default.tfvars
 
+suites:
+  - name: default
+    includes:
+      - default
     verifier:
       systems:
         - name: local
@@ -21,6 +24,3 @@ platforms:
           controls:
             - state_file
             - terraform_output
-
-suites:
-  - name: default
