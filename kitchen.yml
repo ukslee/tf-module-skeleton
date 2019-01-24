@@ -1,8 +1,7 @@
 ---
 driver:
   name: terraform
-
-  root_module_directory: examples/complete
+  root_module_directory: test/fixtures
 
 provisioner:
   name: terraform
@@ -11,8 +10,9 @@ verifier:
   name: terraform
 
 platforms:
-  - name: tf_state
+  - name: default
     drivier:
+      root_module_directory: test/fixtures/default
 
     verifier:
       systems:
